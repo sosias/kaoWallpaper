@@ -4,7 +4,7 @@ let ctx = canvas.getContext("2d");
 let colorBG = "#332d37";
 let colorFG = "#eea014";
 
-let texts = ["༼ つ ◉▿◉ ༽つ","(ﾉ◕ヮ◕)ﾉ","( ゜)ਊ゜)","٩꒰ʘʚʘ ꒱۶"]
+let texts = ["༼ つ ◉▿◉ ༽つ","(ﾉ◕ヮ◕)ﾉ","( ゜)ਊ゜)","٩꒰ʘʚʘ ꒱۶","( ⚆Ⱉ⚆ )"]
 let text = texts[3];
 
 let fontSize = 173;
