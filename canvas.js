@@ -1,12 +1,12 @@
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
 
-var colorBG = "#332d37";
-var colorFG = "#eea014";
+let colorBG = "#332d37";
+let colorFG = "#eea014";
 
-var texts = ["༼ つ ◉▿◉ ༽つ","(ﾉ◕ヮ◕)ﾉ","( ゜)ਊ゜)","٩꒰ʘʚʘ ꒱۶"]
+let texts = ["༼ つ ◉▿◉ ༽つ","(ﾉ◕ヮ◕)ﾉ","( ゜)ਊ゜)","٩꒰ʘʚʘ ꒱۶"]
 
-var text = texts[3];
+let text = texts[3];
 
 let offsets = {
     x: 0,
@@ -24,10 +24,10 @@ function renderKao(){
     let fontHeight = metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent;
     let actualHeight = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
     
-    var textWidth = ctx.measureText(text).width;
-    var textHeight = actualHeight;
-    var posX = canvas.width/2 - textWidth/2 + offsets.x;
-    var posY = canvas.height/2 + offsets.y; // + textHeight/2;
+    let textWidth = ctx.measureText(text).width;
+    let textHeight = actualHeight;
+    let posX = canvas.width/2 - textWidth/2 + offsets.x;
+    let posY = canvas.height/2 + offsets.y; // + textHeight/2;
     console.log(textWidth,canvas.width,posX);
     console.log(textHeight,canvas.height,posY);
     console.log(fontHeight,actualHeight);
@@ -35,19 +35,19 @@ function renderKao(){
     ctx.fillText(text, posX, posY);
 }
 
-var canvasWidth = document.getElementById("canvasWidth");
+let canvasWidth = document.getElementById("canvasWidth");
 canvasWidth.addEventListener("input", (e)=>{
     canvas.width = e.target.value;
     renderKao();
 });
 
-var canvasHeight = document.getElementById("canvasHeight");
+let canvasHeight = document.getElementById("canvasHeight");
 canvasHeight.addEventListener("input", (e)=>{
     canvas.height = e.target.value;
     renderKao();
 });
 
-var textInput = document.getElementById("textInput");
+let textInput = document.getElementById("textInput");
 textInput.addEventListener("input", (e)=>{
     text = e.target.value;
     renderKao();
@@ -65,22 +65,22 @@ colorFGInput.addEventListener("input", (e)=>{
     renderKao();
 });
 
-var offsetLx = document.getElementById("offsetLx");
+let offsetLx = document.getElementById("offsetLx");
 offsetLx.addEventListener("click", ()=>{
     offsets.x--;
     renderKao();
 });
-var offsetRx = document.getElementById("offsetRx");
+let offsetRx = document.getElementById("offsetRx");
 offsetRx.addEventListener("click", ()=>{
     offsets.x++;
     renderKao();
 });
-var offsetUp = document.getElementById("offsetUp");
+let offsetUp = document.getElementById("offsetUp");
 offsetUp.addEventListener("click", ()=>{
     offsets.y--;
     renderKao();
 });
-var offsetDn = document.getElementById("offsetDn");
+let offsetDn = document.getElementById("offsetDn");
 offsetDn.addEventListener("click", ()=>{
     offsets.y++;
     renderKao();
