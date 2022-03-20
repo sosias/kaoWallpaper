@@ -5,8 +5,9 @@ let colorBG = "#332d37";
 let colorFG = "#eea014";
 
 let texts = ["༼ つ ◉▿◉ ༽つ","(ﾉ◕ヮ◕)ﾉ","( ゜)ਊ゜)","٩꒰ʘʚʘ ꒱۶"]
-
 let text = texts[3];
+
+let fontSize = 173;
 
 let offsets = {
     x: 0,
@@ -15,7 +16,7 @@ let offsets = {
 
 
 function renderKao(){
-    ctx.font = "173px Roboto";
+    ctx.font = fontSize + "px Roboto";
 
     ctx.fillStyle = colorBG;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -27,7 +28,7 @@ function renderKao(){
     let textWidth = ctx.measureText(text).width;
     let textHeight = actualHeight;
     let posX = canvas.width/2 - textWidth/2 + offsets.x;
-    let posY = canvas.height/2 + offsets.y; // + textHeight/2;
+    let posY = canvas.height/2 + textHeight/3 + offsets.y;
     console.log(textWidth,canvas.width,posX);
     console.log(textHeight,canvas.height,posY);
     console.log(fontHeight,actualHeight);
@@ -50,6 +51,12 @@ canvasHeight.addEventListener("input", (e)=>{
 let textInput = document.getElementById("textInput");
 textInput.addEventListener("input", (e)=>{
     text = e.target.value;
+    renderKao();
+});
+
+let fontSizeInput = document.getElementById("fontSize");
+fontSizeInput.addEventListener("input", (e)=>{
+    fontSize = e.target.value;
     renderKao();
 });
 
