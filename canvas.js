@@ -6,7 +6,6 @@ var colorFG = "#eea014";
 
 var texts = ["༼ つ ◉▿◉ ༽つ","(ﾉ◕ヮ◕)ﾉ","( ゜)ਊ゜)","٩꒰ʘʚʘ ꒱۶"]
 
-ctx.font = "173px Roboto";
 var text = texts[3];
 
 let offsets = {
@@ -16,6 +15,8 @@ let offsets = {
 
 
 function renderKao(){
+    ctx.font = "173px Roboto";
+
     ctx.fillStyle = colorBG;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -33,6 +34,18 @@ function renderKao(){
     ctx.fillStyle = colorFG;
     ctx.fillText(text, posX, posY);
 }
+
+var canvasWidth = document.getElementById("canvasWidth");
+canvasWidth.addEventListener("input", (e)=>{
+    canvas.width = e.target.value;
+    renderKao();
+});
+
+var canvasHeight = document.getElementById("canvasHeight");
+canvasHeight.addEventListener("input", (e)=>{
+    canvas.height = e.target.value;
+    renderKao();
+});
 
 var textInput = document.getElementById("textInput");
 textInput.addEventListener("input", (e)=>{

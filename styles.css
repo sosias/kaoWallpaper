@@ -12,6 +12,13 @@ body{
     left: 20px;
 }
 
+#canvasSize input{
+    width: 205px;
+    height: 100px;
+    font-size: 70px;
+    border-radius: 10px;
+}
+
 #offsets button{
     width: 100px;
     height: 100px;
@@ -20,9 +27,9 @@ body{
 }
 
 #textInput{
-    width: 100%;
+    width: 410px;
     height: 100px;
-    font-size: xx-large;
+    font-size: 70px;
     border-radius: 10px;
 }
 
