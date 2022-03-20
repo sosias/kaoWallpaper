@@ -7,7 +7,7 @@ var colorFG = "#eea014";
 var texts = ["༼ つ ◉▿◉ ༽つ","(ﾉ◕ヮ◕)ﾉ","( ゜)ਊ゜)","٩꒰ʘʚʘ ꒱۶"]
 
 ctx.font = "173px Roboto";
-var text = texts[1];
+var text = texts[3];
 
 let offsets = {
     x: 0,
@@ -33,6 +33,13 @@ function renderKao(){
     ctx.fillStyle = colorFG;
     ctx.fillText(text, posX, posY);
 }
+
+var textInput = document.getElementById("textInput");
+textInput.addEventListener("input", (e)=>{
+    text = e.target.value;
+    renderKao();
+});
+
 
 var offsetLx = document.getElementById("offsetLx");
 offsetLx.addEventListener("click", ()=>{

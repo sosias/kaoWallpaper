@@ -6,7 +6,7 @@ body{
     margin: 0;
 }
 
-#offsets{
+#ui{
     position: absolute;
     top: 20px;
     left: 20px;
@@ -14,6 +14,13 @@ body{
 
 #offsets button{
     width: 100px;
+    height: 100px;
+    font-size: xx-large;
+    border-radius: 10px;
+}
+
+#textInput{
+    width: 100%;
     height: 100px;
     font-size: xx-large;
     border-radius: 10px;
