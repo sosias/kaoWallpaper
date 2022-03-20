@@ -40,6 +40,17 @@ textInput.addEventListener("input", (e)=>{
     renderKao();
 });
 
+let colorBGInput = document.getElementById("colorBG");
+colorBGInput.addEventListener("input", (e)=>{
+    colorBG = e.target.value;
+    renderKao();
+});
+
+let colorFGInput = document.getElementById("colorFG");
+colorFGInput.addEventListener("input", (e)=>{
+    colorFG = e.target.value;
+    renderKao();
+});
 
 var offsetLx = document.getElementById("offsetLx");
 offsetLx.addEventListener("click", ()=>{
